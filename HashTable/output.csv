@@ -1,0 +1,98 @@
+,Seperate Chaining
+,Before Deletion,After Deletion
+Load Factor,Avg search time,Avg Search Time
+0.4,5.0E-4,0.002
+0.5,0.0,2.0E-4
+0.6,3.333333333333333E-4,0.0015
+0.7,5.714285714285715E-4,0.0012857142857142856
+0.8,5.0E-4,8.75E-4
+0.9,3.333333333333333E-4,4.4444444444444447E-4
+
+
+,Linear Probing
+,Before Deletion,,After Deletion,
+Load Factor,Avg search time,Avg Number of probes,Avg Search Time,Avg number of probes
+0.4,0.0,0,0.001,1
+0.5,0.0,0,6.0E-4,2
+0.6,1.6666666666666666E-4,0,6.666666666666666E-4,2
+0.7,0.001,0,0.002142857142857143,4
+0.8,0.001625,1,0.00475,9
+0.9,0.001,4,0.025444444444444443,33
+
+
+,Quadratic Probing
+,Before Deletion,,After Deletion,
+Load Factor,Avg search time,Avg Number of probes,Avg Search Time,Avg number of probes
+0.4,0.00225,0,0.0025,1
+0.5,0.0,0,4.0E-4,1
+0.6,0.0011666666666666668,0,0.0016666666666666668,1
+0.7,4.2857142857142855E-4,0,0.002285714285714286,2
+0.8,0.0015,0,0.003375,3
+0.9,0.002777777777777778,1,0.008222222222222223,7
+
+
+,Double Hashing
+,Before Deletion,,After Deletion,
+Load Factor,Avg search time,Avg Number of probes,Avg Search Time,Avg number of probes
+0.4,0.0,0,0.0,1
+0.5,0.0,0,0.0032,1
+0.6,0.0013333333333333333,0,0.0015,1
+0.7,0.001,0,8.571428571428571E-4,2
+0.8,0.001625,0,0.0045,3
+0.9,5.555555555555556E-4,1,0.01011111111111111,6
+
+
+,Load Factor 0.4
+,Before Deletion,,After Deletion,
+Method,Avg search time,Avg Number of probes,Avg Search Time,Avg number of probes
+Seperate Chaining,5.0E-4,N/A,0.002,N/A
+Linear Probing,0.0,0,0.001,1
+Quadratic Probing,0.00225,0,0.0025,1
+Double Hashing,0.0,0,0.0,1
+
+
+,Load Factor 0.5
+,Before Deletion,,After Deletion,
+Method,Avg search time,Avg Number of probes,Avg Search Time,Avg number of probes
+Seperate Chaining,0.0,N/A,2.0E-4,N/A
+Linear Probing,0.0,0,6.0E-4,2
+Quadratic Probing,0.0,0,4.0E-4,1
+Double Hashing,0.0,0,0.0032,1
+
+
+,Load Factor 0.6
+,Before Deletion,,After Deletion,
+Method,Avg search time,Avg Number of probes,Avg Search Time,Avg number of probes
+Seperate Chaining,3.333333333333333E-4,N/A,0.0015,N/A
+Linear Probing,1.6666666666666666E-4,0,6.666666666666666E-4,2
+Quadratic Probing,0.0011666666666666668,0,0.0016666666666666668,1
+Double Hashing,0.0013333333333333333,0,0.0015,1
+
+
+,Load Factor 0.7
+,Before Deletion,,After Deletion,
+Method,Avg search time,Avg Number of probes,Avg Search Time,Avg number of probes
+Seperate Chaining,5.714285714285715E-4,N/A,0.0012857142857142856,N/A
+Linear Probing,0.001,0,0.002142857142857143,4
+Quadratic Probing,4.2857142857142855E-4,0,0.002285714285714286,2
+Double Hashing,0.001,0,8.571428571428571E-4,2
+
+
+,Load Factor 0.8
+,Before Deletion,,After Deletion,
+Method,Avg search time,Avg Number of probes,Avg Search Time,Avg number of probes
+Seperate Chaining,5.0E-4,N/A,8.75E-4,N/A
+Linear Probing,0.001625,1,0.00475,9
+Quadratic Probing,0.0015,0,0.003375,3
+Double Hashing,0.001625,0,0.0045,3
+
+
+,Load Factor 0.9
+,Before Deletion,,After Deletion,
+Method,Avg search time,Avg Number of probes,Avg Search Time,Avg number of probes
+Seperate Chaining,3.333333333333333E-4,N/A,4.4444444444444447E-4,N/A
+Linear Probing,0.001,4,0.025444444444444443,33
+Quadratic Probing,0.002777777777777778,1,0.008222222222222223,7
+Double Hashing,5.555555555555556E-4,1,0.01011111111111111,6
+
+
