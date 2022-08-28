@@ -214,13 +214,6 @@ public class BandMatrix {
         int minimumBand = getBandwidth(matrix);
         String[][] ansMatrix = new String[size][size];
         PriorityQueue<Node> priorityQueue = new PriorityQueue<Node>(Priority);
-        //System.out.println(matrix[1][0]);
-//        for(int i=0; i<size; i++){
-//            for(int j=0; j<size; j++){
-//                System.out.print(matrix[i][j]+" ");
-//            }
-//            System.out.println();
-//        }
         priorityQueue.add(new Node(matrix, size,0,0,0,0));
         while(!priorityQueue.isEmpty()){
             Node minNode = priorityQueue.remove();
@@ -246,19 +239,15 @@ public class BandMatrix {
                 int fixedRowCount = minNode.fixedRowCount;
                 int level = minNode.level + 1;
                 for(int i = fixedColumnCount; i<=size; i++){
-                    //tempMatrix = minNode.matrix;
                     for(int k = 0; k<size; k++){
                         for(int l = 0; l<size; l++){
                             tempMatrix[k][l] = minNode.matrix[k][l];
                         }
                     }
                     columnSwap(tempMatrix, fixedColumnCount, i);
-                    //System.out.println(getLowerBound(tempMatrix, fixedRowCount, fixedColumnCount, size));
                     minLowerBound = Math.min(minLowerBound, getLowerBound(tempMatrix, fixedRowCount, fixedColumnCount, size));
-                    //columnSwap(tempMatrix, fixedColumnCount, i);
                 }
                 for(int i=fixedColumnCount; i<=size; i++){
-                    //tempMatrix = minNode.matrix;
                     for(int k = 0; k<size; k++){
                         for(int l = 0; l<size; l++){
                             tempMatrix[k][l] = minNode.matrix[k][l];
@@ -268,16 +257,7 @@ public class BandMatrix {
 
                     if(getLowerBound(tempMatrix, fixedRowCount, fixedColumnCount, size) == minLowerBound){
                         priorityQueue.add(new Node(tempMatrix,size,fixedRowCount,fixedColumnCount,level,i));
-//                        System.out.println(level+" "+i);
-//                        for(int k = 0; k<size; k++){
-//                            for(int l = 0; l<size; l++){
-//                                System.out.print(tempMatrix[k][l]+" ");
-//                            }
-//                            System.out.println();
-//                        }
-//                        System.out.println("----------------------------");
                     }
-                    //columnSwap(tempMatrix, fixedColumnCount, i);
                 }
             }
             else{
@@ -287,7 +267,6 @@ public class BandMatrix {
                 int fixedRowCount = minNode.fixedRowCount + 1;
                 int level = minNode.level + 1;
                 for(int i = fixedRowCount; i<=size; i++){
-                   //tempMatrix = minNode.matrix;
                     for(int k = 0; k<size; k++){
                         for(int l = 0; l<size; l++){
                             tempMatrix[k][l] = minNode.matrix[k][l];
@@ -295,10 +274,8 @@ public class BandMatrix {
                     }
                     rowSwap(tempMatrix, fixedRowCount, i);
                     minLowerBound = Math.min(minLowerBound, getLowerBound(tempMatrix, fixedRowCount, fixedColumnCount, size));
-                    //rowSwap(tempMatrix, fixedRowCount, i);
                 }
                 for(int i = fixedRowCount; i<=size; i++){
-                    //tempMatrix = minNode.matrix;
                     for(int k = 0; k<size; k++){
                         for(int l = 0; l<size; l++){
                             tempMatrix[k][l] = minNode.matrix[k][l];
@@ -308,7 +285,6 @@ public class BandMatrix {
                     if(getLowerBound(tempMatrix, fixedRowCount, fixedColumnCount, size) == minLowerBound){
                         priorityQueue.add(new Node(tempMatrix,size,fixedRowCount,fixedColumnCount,level,i));
                     }
-                    //rowSwap(tempMatrix, fixedRowCount, i);
                 }
             }
         }
